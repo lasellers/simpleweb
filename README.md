@@ -1,3 +1,3 @@
 # SimpleWeb
 
-Docker web tests
+Simple reference Nginx webserver serving static content.
