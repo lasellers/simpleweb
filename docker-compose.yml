@@ -1,0 +1,20 @@
+# sudo docker-compose up
+# sudo docker exec -it simpleweb_compose bash
+# sudo docker-compose down --remove-orphans
+version: '3'
+services:
+  # chmod +x /home/app
+  # nginx -t
+  simpleweb:
+    container_name: simpleweb_compose
+    image: nginx:latest
+    restart: unless-stopped
+    tty: true
+    volumes:
+      - ./web/:/var/www/html/
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    networks:
+      default:
+
+networks:
+  default:
